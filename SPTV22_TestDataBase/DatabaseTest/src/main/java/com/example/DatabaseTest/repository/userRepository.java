@@ -1,4 +1,4 @@
 package com.example.DatabaseTest.repository;
 
-public class userRepository {
+public class userRepository     {
 }
