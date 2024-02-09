@@ -1,6 +1,8 @@
 package com.example.DatabaseTest.controlers;
 
-import com.example.DatabaseTest.entity.Admin;
+import com.example.DatabaseTest.entity.User;
+import ch.qos.logback.core.model.Model;
+import com.example.DatabaseTest.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,7 +20,7 @@ public class UserController {
     }
     @GetMapping
     public String getAllUsers(Model model){
-        model.addAtribute("users",userService.getAllUsers());
+        model.addAttribute("users",userService.getAll());
         return "users/list";
     }
 
