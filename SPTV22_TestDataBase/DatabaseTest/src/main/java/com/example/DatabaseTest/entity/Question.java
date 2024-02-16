@@ -4,7 +4,9 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import lombok.Getter;
 
+@Getter
 @Entity
 public class Question {
     @Id
@@ -17,14 +19,6 @@ public class Question {
 
     public Question(String questionText) {
         this.questionText = questionText;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public String getQuestionText() {
-        return questionText;
     }
 
     public void setQuestionText(String questionText) {
